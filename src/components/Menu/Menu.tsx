@@ -1,10 +1,10 @@
 "use client"
 
-import { PackageSearch, Box, ShoppingCart, ChartNoAxesColumn, ChevronLeft, Menu as MenuIcon, ChevronRight, LayoutDashboard } from "lucide-react"
+import { LucideIcon, PackageSearch, Box, ShoppingCart, ChartNoAxesColumn, ChevronLeft, Menu as MenuIcon, ChevronRight, LayoutDashboard } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 
-const iconMap: { [key: string]: React.ComponentType<{ size: number }> } = {
+const iconMap: { [key: string]: LucideIcon } = {
     PackageSearch,
     ShoppingCart,
     Box,
@@ -37,7 +37,7 @@ export default function Menu({ onExpandChange }: MenuProps) {
                     <IconComponent
                         size={24}
                         strokeWidth={2}
-                        className="transition-colors flex-shrink-0"
+                        className="transition-colors flex shrink-0"
                     />
                     {isExpanded && (
                         <span className="whitespace-nowrap">
