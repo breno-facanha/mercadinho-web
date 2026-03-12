@@ -9,7 +9,7 @@ interface CardDetailsProps {
 
 export default function CardDetails({nome, valor, percentual, descricao}: CardDetailsProps) {
     return (
-        <div className="p-4 bg-white rounded-lg shadow-md border border-[#E2E8F0] w-58 flex">
+        <div className="w-full p-4 bg-white rounded-lg shadow-md border border-[#E2E8F0] flex items-start justify-between gap-3 sm:p-5">
             <div className="flex flex-col gap-5">
                 <div className="text-base text-[#64748B]">{nome}</div>
                 <div className="font-bold text-lg">{valor}</div>
@@ -18,7 +18,7 @@ export default function CardDetails({nome, valor, percentual, descricao}: CardDe
                     <span className="text-[13px] text-[#64748B]">{descricao}</span>
                 </div>
             </div>
-            <div className="">
+            <div className="shrink-0">
                 <TrendingUp size={24} strokeWidth={2} className="text-green-500" />
             </div>
         </div>
