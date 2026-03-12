@@ -36,10 +36,10 @@ export default function Pagina(props: PaginaProps) {
 
    
     return (
-        <div className="flex h-screen ">
-            <div className={`flex flex-col bg-white h-screen transition-all duration-300 ${isMenuExpanded ? 'w-62' : 'w-20'} border-r`}>
+        <div className="flex min-h-screen">
+            <div className={`sticky top-0 flex min-h-screen flex-col bg-white transition-all duration-300 ${isMenuExpanded ? 'w-62' : 'w-20'} border-r`}>
                 <div className={`h-20 text-green-500 flex items-center gap-2 ${isMenuExpanded ? 'pl-2' : 'justify-center'}`}>
-                   <div className="bg-[#D0FBDE] px-3 py-3 rounded-xl flex-shrink-0">
+                   <div className="bg-[#D0FBDE] px-3 py-3 rounded-xl shrink-0">
                     <Store strokeWidth={2.5}/>
                    </div>
                    {isMenuExpanded && (
@@ -69,7 +69,7 @@ export default function Pagina(props: PaginaProps) {
                     )}
                 </div>
             </div>
-            <main className="flex flex-col w-full h-screen">
+            <main className="flex min-h-screen w-full flex-1 flex-col">
                 <header className=" bg-white w-full border-b px-6 py-2 flex items-center justify-between">
                     <div className="flex flex-col">
                         <span className="text-black font-bold text-xl">
