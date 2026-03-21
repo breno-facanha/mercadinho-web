@@ -6,7 +6,7 @@ export default function Login() {
         <main className="min-h-screen bg-[#F6F8F6] px-6 py-8 text-[#24282c] lg:px-10">
             <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl items-center justify-center">
                 <div className="grid w-full overflow-hidden rounded-[36px] border border-[#D9E5DD] bg-white shadow-[0_24px_80px_-48px_rgba(36,40,44,0.35)] lg:grid-cols-[1.1fr_0.9fr]">
-                    <section className="bg-[linear-gradient(160deg,#F7FFF9_0%,#E7FDEE_55%,#D0FBDE_100%)] p-8 sm:p-10 lg:p-12">
+                    <section className="hidden bg-[linear-gradient(160deg,#F7FFF9_0%,#E7FDEE_55%,#D0FBDE_100%)] p-8 sm:p-10 lg:block lg:p-12">
                         <Link
                             href="/home"
                             className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f5d3b] transition hover:bg-white"
@@ -32,6 +32,14 @@ export default function Login() {
 
                     <section className="p-8 sm:p-10 lg:p-12">
                         <div className="mx-auto max-w-md">
+                            <Link
+                                href="/home"
+                                className="mb-6 inline-flex items-center gap-2 rounded-full bg-[#D0FBDE] px-4 py-2 text-sm font-semibold text-[#14311d] transition hover:brightness-[1.03] lg:hidden"
+                            >
+                                <ArrowLeft size={16} />
+                                Voltar para home
+                            </Link>
+
                             <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#D0FBDE] text-[#16a34a]">
                                 <LockKeyhole size={26} strokeWidth={2.4} />
                             </div>
