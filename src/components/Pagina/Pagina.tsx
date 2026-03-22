@@ -30,6 +30,9 @@ export default function Pagina(props: PaginaProps) {
         case "/relatorios":
          cabeçalho = "Relatórios";
         break;
+        case "/tipoPagamento":
+         cabeçalho = "Tipo de Pagamento";
+        break;
         default:
          cabeçalho = "Página";
     }
