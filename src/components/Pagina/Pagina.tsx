@@ -69,7 +69,7 @@ export default function Pagina(props: PaginaProps) {
                                 </div>
 
                                 <button
-                                    className="bg-red-400 h-9 w-9 rounded-lg text-[#61896F] hover:bg-[#E7FDEE] hover:text-green-600 transition-colors flex items-center justify-center"
+                                    className="h-9 w-9 rounded-lg text-[#61896F] hover:bg-[#E7FDEE] hover:text-green-600 transition-colors flex items-center justify-center"
                                     title="Sair"
                                     aria-label="Sair"
                                     onClick={() => router.push("/login")}
