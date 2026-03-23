@@ -94,9 +94,9 @@ export default function TipoPagamento() {
                     <span className="font-bold text-lg text-[#24282c]">Tipos de Pagamento</span>
                     <button
                         onClick={abrirModalCriar}
-                        className="flex items-center gap-2 px-4 py-2 bg-[#61896F] text-white rounded-lg hover:bg-green-500 transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 bg-[#13EC5B] text-white font-medium rounded-lg hover:bg-green-500 transition-colors"
                     >
-                        <Plus size={20} />
+                        <Plus size={16} strokeWidth={2.5}/>
                         Adicionar Tipo
                     </button>
                 </div>
@@ -198,7 +198,7 @@ export default function TipoPagamento() {
                             </button>
                             <button
                                 onClick={handleSalvar}
-                                className="flex-1 px-4 py-2 bg-[#61896F] text-white rounded-lg hover:bg-green-500 transition-colors"
+                                className="flex-1 px-4 py-2 bg-[#13EC5B] text-white rounded-lg hover:bg-green-500 transition-colors"
                             >
                                 Salvar
                             </button>
