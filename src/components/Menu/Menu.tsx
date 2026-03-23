@@ -126,7 +126,7 @@ export default function Menu({ onExpandChange }: MenuProps) {
                     { url: '/tipoPagamento', label: 'Pagamento' },
                     { url: '/preferencias', label: 'Preferências' },
                     { url: '/seguranca', label: 'Segurança' },
-                    { url: '/logout', label: 'Sair' },
+                    { url: '/login', label: 'Sair' },
                 ])}
             </ul>
         </div>
