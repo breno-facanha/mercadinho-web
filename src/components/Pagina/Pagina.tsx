@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Menu from "../Menu/Menu"
-import { Store } from "lucide-react";
+import { Store, LogOut } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 interface PaginaProps {
@@ -55,21 +55,30 @@ export default function Pagina(props: PaginaProps) {
                 <nav className="flex-1">
                   <Menu onExpandChange={setIsMenuExpanded} />
                 </nav>
-                <div className=" h-20 w-full flex justify-center items-center border-t">
-                    <div className="h-6 w-6 rounded-full bg-gray-400 m-2 flex items-center justify-center shrink-0">
-                        B
+                <div className="h-20 w-full border-t border-[#E2E8F0] px-3 py-2">
+                    <div className={`h-full w-full rounded-xl flex items-center ${isMenuExpanded ? 'justify-between px-2' : 'justify-center'}`}>
+                        <div className="h-10 w-10 rounded-full bg-[#D0FBDE] text-[#2A6A3E] font-bold flex items-center justify-center shrink-0">
+                            B
+                        </div>
+
+                        {isMenuExpanded && (
+                            <>
+                                <div className="flex-1 min-w-0 pl-3">
+                                    <div className="text-sm font-bold text-[#24282c] leading-tight truncate">Breno</div>
+                                    <div className="text-xs text-[#61896F] leading-tight truncate">Administrador</div>
+                                </div>
+
+                                <button
+                                    className="bg-red-400 h-9 w-9 rounded-lg text-[#61896F] hover:bg-[#E7FDEE] hover:text-green-600 transition-colors flex items-center justify-center"
+                                    title="Sair"
+                                    aria-label="Sair"
+                                    onClick={() => router.push("/login")}
+                                >
+                                    <LogOut size={18} strokeWidth={2.2} />
+                                </button>
+                            </>
+                        )}
                     </div>
-                    {isMenuExpanded && (
-                        <>
-                            <div className="flex flex-col justify-center items-center pl-5">
-                                <div className="text-lg font-bold">Nome</div>
-                                <div className="text-sm">Cargo</div>
-                            </div>
-                            <div className="flex-1 flex items-center justify-end">
-                                sair
-                            </div>
-                        </>
-                    )}
                 </div>
             </div>
             <main className="flex min-h-screen w-full flex-1 flex-col">
