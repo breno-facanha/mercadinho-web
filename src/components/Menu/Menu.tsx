@@ -124,7 +124,7 @@ export default function Menu({ onExpandChange }: MenuProps) {
                 {renderMenuItem('/relatorios', 'ChartNoAxesColumn', 'Relatórios')}
                 {renderMenuWithSubmenu('Settings', 'Configurações', 'configuracoes', [
                     { url: '/tipoPagamento', label: 'Pagamento' },
-                    { url: '/preferencias', label: 'Preferências' },
+                    { url: '/fornecedor', label: 'Fornecedor' },
                     { url: '/seguranca', label: 'Segurança' },
                     { url: '/login', label: 'Sair' },
                 ])}
