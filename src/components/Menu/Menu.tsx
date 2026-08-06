@@ -105,7 +105,7 @@ export default function Menu({ onExpandChange }: MenuProps) {
     }
 
     return (
-        <div className="flex flex-col h-full gap-4 bg-gray-50 border-r border-[#E2E8F0]">
+        <div className="flex flex-col h-full gap-4">
             <button
                 onClick={handleToggle}
                 className="flex items-center justify-center w-full p-2 hover:bg-[#E7FDEE] rounded text-[#61896F] hover:text-green-500 transition-colors"
