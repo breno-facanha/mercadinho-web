@@ -22,5 +22,8 @@ jobs:
       - name: Pull Production Environment
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
+      - name: Build Production
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
       - name: Deploy Production
         run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
