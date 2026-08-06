@@ -6,15 +6,16 @@ on:
       - develop
 
 jobs:
-  deploy-production:
+  deploy-preview:
     runs-on: ubuntu-latest
 
     environment:
-      name: production
+      name: develop
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/checkout@v4
         with:
@@ -26,11 +27,11 @@ jobs:
       - name: Verify Vercel Authentication
         run: vercel whoami --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Pull Production Environment
+      - name: Pull Develop Environment
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Build Production
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Develop
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy Production
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Develop
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
