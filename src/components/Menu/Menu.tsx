@@ -77,7 +77,7 @@ export default function Menu({ onExpandChange }: MenuProps) {
                                 {texto}
                             </span>
                             <ChevronDown
-                                size={21}
+                                size={20}
                                 strokeWidth={2}
                                 className={`transition-transform flex shrink-0 ${isOpen ? 'rotate-180' : ''}`}
                             />
