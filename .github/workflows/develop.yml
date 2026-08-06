@@ -1,4 +1,4 @@
-name: Deploy Production Vercel
+name: Deploy Develop Vercel
 
 on:
   push:
