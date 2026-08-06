@@ -1,0 +1,37 @@
+name: Deploy Develop Vercel
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: develop
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/checkout@v4
+        with:
+          node-version: '24'
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Verify Vercel Authentication
+        run: vercel whoami --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Pull Develop Environment
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Develop
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Develop
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
