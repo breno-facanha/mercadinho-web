@@ -28,7 +28,7 @@ jobs:
         run: vercel whoami --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Pull Develop Environment
-        run: vercel pull --yes --environment=develop --token=${{ secrets.VERCEL_TOKEN }}  
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}  
 
       - name: Build Develop
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
