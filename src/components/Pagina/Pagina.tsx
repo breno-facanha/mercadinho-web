@@ -107,7 +107,7 @@ export default function Pagina(props: PaginaProps) {
                         + Nova Venda
                     </button>
                 </header>
-                <div className="bg-[#F6F8F6] w-full flex-1 text-black p-6">
+                <div className="bg-[#F6F8F6] w-full flex-1 text-green-500 p-6">
                     {props.children}
                 </div>
             </main>
